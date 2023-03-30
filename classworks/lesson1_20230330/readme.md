@@ -82,22 +82,37 @@ WHERE
 --  Найти всех сотрудников (имя и фамилию), у которых есть две буквы ll подряд в середине имени
 ```
 SELECT
-	first_name,
+    first_name,
     last_name
 FROM Employees
 WHERE
-	first_name like '%_ll_%'
+    first_name like '%_ll_%'
 ;
 ```
 ### Task7:
--- 
+--  Найти всех сотрудников (имя и фамилию), у которых фамилия кончается на a
 ```
+SELECT
+    first_name,
+    last_name
+FROM Employees
+WHERE
+    last_name like '%a'
+;
 ```
-### Task8:
--- 
-```
-```
-### Task9:
--- 
-```
-```
+
+### Homework:
+Задачи:
+1. Найти всех сотрудников, работающих в департаменте с id 90
+2. Найти всех сотрудников, зарабатывающих больше 5000
+3. Найти всех сотрудников, чья фамилия начинается на букву L
+4. Вывести всех сотрудников с job_id ‘FI_ACCOUNT’ и зарабатывающих меньше 8000
+5. Вывести всех сотрудников кроме тех, кто работает в департаментах 80 и 110
+6. Вывести сотрудников зарабатывающих от 5000 до 7000 (включая концы)
+Материалы:
+1) Базовые понятия и синтаксис: https://drive.google.com/file/d/1E3AlHEiIwoceUUJwoXLf0-rUcelWQhZY/view
+2)Логические операторы:
+https://drive.google.com/file/d/15oYTsuHLTRFLpMAszICBbrASkhWDmszn/view
+https://drive.google.com/file/d/1VMgwOLCECyUPgrY8y0G7LEoJkbzgSBv7/view
+3) Домашка:
+Установить MySQL server и MySQL Workbench по инструкции из видео: https://drive.google.com/file/d/1SXcx3GhQwwPctgVBS9KuYW_czrksua9Z/view
