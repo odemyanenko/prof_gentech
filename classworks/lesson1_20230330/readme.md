@@ -18,3 +18,15 @@ WHERE
     last_name like "Do%"
 ;
 ```
+
+### Task1:
+--  1. Найти всех сотрудников (имя и фамилию) c job_id = IT_PROG
+```
+SELECT
+	first_name,
+    last_name
+FROM Employees
+WHERE
+	job_id = "IT_PROG"
+;
+```
