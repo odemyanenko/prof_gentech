@@ -30,3 +30,19 @@ WHERE
 	job_id = "IT_PROG"
 ;
 ```
+### Task2:
+--  1. Найти всех сотрудников (имя и фамилию, зп) с зп больше 10 000
+```
+SELECT
+	first_name,
+    last_name,
+    salary
+FROM Employees
+WHERE
+	salary > 10000
+;
+```
+### Task3:
+
+```
+```
