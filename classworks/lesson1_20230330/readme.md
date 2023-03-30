@@ -23,11 +23,11 @@ WHERE
 --  1. Найти всех сотрудников (имя и фамилию) c job_id = IT_PROG
 ```
 SELECT
-	first_name,
+    first_name,
     last_name
 FROM Employees
 WHERE
-	job_id = "IT_PROG"
+    job_id = "IT_PROG"
 ;
 ```
 ### Task2:
@@ -79,10 +79,25 @@ WHERE
 ;
 ```
 ### Task6:
+--  Найти всех сотрудников (имя и фамилию), у которых есть две буквы ll подряд в середине имени
+```
+SELECT
+	first_name,
+    last_name
+FROM Employees
+WHERE
+	first_name like '%_ll_%'
+;
+```
+### Task7:
 -- 
 ```
 ```
-### Task7:
+### Task8:
+-- 
+```
+```
+### Task9:
 -- 
 ```
 ```
