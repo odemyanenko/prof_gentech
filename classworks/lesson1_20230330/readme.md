@@ -1,61 +1,101 @@
-Tasks
-----------------
-### Task 1 Оценить временную сложность следующий алгоритмов:
-а) Временная сложность O(2n) => O(n) - линейное время
-b - O(1), w - O(n)
+Sand----------------
+[SandBox](https://www.programiz.com/sql/online-compiler/)
+
+### Examples:
 ```
-void test1(int n)
-{
-if (n==1)
-return;
-for (int i=1; i<=n; i++)
-for (int j=1; j<=n; j++)
-System.out.println("");
-break;
-}
+SELECT first_name, 
+       last_name,
+       age,
+       country
+FROM Customers
+WHERE 
+	--age > 25
+	--first_name = 'John'
+    --country = 'USA'
+    --age not between 25 and 30
+    --country in ("USA", "UK")
+    last_name like "Do%"
+;
 ```
-б) Временная сложность O(n)*O(n) => O(n^2) - квадратичное время
+
+### Task1:
+--  1. Найти всех сотрудников (имя и фамилию) c job_id = IT_PROG
 ```
-void test2(int n)
-{
-int a = 0;
-for (i = 0; i < n; i++)
-for (j = n; j > i; j--)
-a = a + i + j;    
-}
+SELECT
+    first_name,
+    last_name
+FROM Employees
+WHERE
+    job_id = "IT_PROG"
+;
 ```
-в) Временная сложность O(n/2)*O(Log n) => O(n*Log n) - линейно-логарифмическое время
+### Task2:
+--  Найти всех сотрудников (имя и фамилию, зп) с зп больше 10 000
 ```
-void test3(int n)
-{
-int i, j, a = 0;
-for (i = n/2; i <=n; i++)
-for (j = 2; j <=n; j=j2)
-a=a+n/2;    
-}
+SELECT
+    first_name,
+    last_name,
+    salary
+FROM Employees
+WHERE
+    salary > 10000
+;
 ```
-г)  Временная сложность O(Log n) - логарифмическое время
+### Task3:
+--  Найти всех сотрудников (имя и фамилию, зп) с зп 10 000 до 20 000 (включая концы)
 ```
-void test4(int n)
-{
-int a = 0, i = n;
-while (i > 0) {
-a += i;
-i /= 2;
-}
-}
+SELECT
+    first_name,
+    last_name,
+    salary
+FROM Employees
+WHERE
+    salary between 10000 and 20000
+;
 ```
-### Task 2. Познакомиться с [Задачей коммивояжёра](https://ru.wikipedia.org/wiki/%D0%97%D0%B0%D0%B4%D0%B0%D1%87%D0%B0_%D0%BA%D0%BE%D0%BC%D0%BC%D0%B8%D0%B2%D0%BE%D1%8F%D0%B6%D1%91%D1%80%D0%B0).
-### Task 3. (*)
-Write a function to find the longest common prefix string amongst an array of strings. If there is no common prefix, return an empty string "".
+### Task4:
+-- Найти всех сотрудников (имя и фамилию, зп) с зп 10 000 до 20 000 (не включая концы)
 ```
-Example 1:
-Input: strs = ["flower","flow","flight"]
-Output: "fl"
+SELECT
+    first_name,
+    last_name,
+    salary
+FROM Employees
+WHERE
+    salary > 10000 and salary < 20000
+;
 ```
+### Task5:
+-- Найти всех сотрудников (имя и фамилию, айди департамента) не из 60, 30 и 100 департаментов
 ```
-Example 2:
-Input: strs = ["dog","racecar","car"]
-Output: ""
-Explanation: There is no common prefix among the input strings.
+SELECT
+    first_name,
+    last_name,
+    department_id
+FROM Employees
+WHERE
+    department_id not in (30, 60, 100)
+;
+```
+### Task6:
+--  Найти всех сотрудников (имя и фамилию), у которых есть две буквы ll подряд в середине имени
+```
+SELECT
+    first_name,
+    last_name
+FROM Employees
+WHERE
+    first_name like '%_ll_%'
+;
+```
+### Task7:
+--  Найти всех сотрудников (имя и фамилию), у которых фамилия кончается на a
+```
+SELECT
+    first_name,
+    last_name
+FROM Employees
+WHERE
+    last_name like '%a'
+;
 ```
