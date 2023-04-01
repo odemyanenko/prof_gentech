@@ -1,4 +1,5 @@
-Sand----------------
+Sand
+----------------
 [SandBox](https://www.programiz.com/sql/online-compiler/)
 
 ### Examples:
