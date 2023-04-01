@@ -1,118 +1,61 @@
-Sand
+Tasks
 ----------------
-[SandBox](https://www.programiz.com/sql/online-compiler/)
-
-### Examples:
+### Task 1 Оценить временную сложность следующий алгоритмов:
+а) Временная сложность O(2n) => O(n) - линейное время
+b - O(1), w - O(n)
 ```
-SELECT first_name, 
-       last_name,
-       age,
-       country
-FROM Customers
-WHERE 
-	--age > 25
-	--first_name = 'John'
-    --country = 'USA'
-    --age not between 25 and 30
-    --country in ("USA", "UK")
-    last_name like "Do%"
-;
+void test1(int n)
+{
+if (n==1)
+return;
+for (int i=1; i<=n; i++)
+for (int j=1; j<=n; j++)
+System.out.println("");
+break;
+}
 ```
-
-### Task1:
---  1. Найти всех сотрудников (имя и фамилию) c job_id = IT_PROG
+б) Временная сложность O(n)*O(n) => O(n^2) - квадратичное время
 ```
-SELECT
-    first_name,
-    last_name
-FROM Employees
-WHERE
-    job_id = "IT_PROG"
-;
+void test2(int n)
+{
+int a = 0;
+for (i = 0; i < n; i++)
+for (j = n; j > i; j--)
+a = a + i + j;    
+}
 ```
-### Task2:
---  Найти всех сотрудников (имя и фамилию, зп) с зп больше 10 000
+в) Временная сложность O(n/2)*O(Log n) => O(n*Log n) - линейно-логарифмическое время
 ```
-SELECT
-    first_name,
-    last_name,
-    salary
-FROM Employees
-WHERE
-    salary > 10000
-;
+void test3(int n)
+{
+int i, j, a = 0;
+for (i = n/2; i <=n; i++)
+for (j = 2; j <=n; j=j2)
+a=a+n/2;    
+}
 ```
-### Task3:
---  Найти всех сотрудников (имя и фамилию, зп) с зп 10 000 до 20 000 (включая концы)
+г)  Временная сложность O(Log n) - логарифмическое время
 ```
-SELECT
-    first_name,
-    last_name,
-    salary
-FROM Employees
-WHERE
-    salary between 10000 and 20000
-;
+void test4(int n)
+{
+int a = 0, i = n;
+while (i > 0) {
+a += i;
+i /= 2;
+}
+}
 ```
-### Task4:
--- Найти всех сотрудников (имя и фамилию, зп) с зп 10 000 до 20 000 (не включая концы)
+### Task 2. Познакомиться с [Задачей коммивояжёра](https://ru.wikipedia.org/wiki/%D0%97%D0%B0%D0%B4%D0%B0%D1%87%D0%B0_%D0%BA%D0%BE%D0%BC%D0%BC%D0%B8%D0%B2%D0%BE%D1%8F%D0%B6%D1%91%D1%80%D0%B0).
+### Task 3. (*)
+Write a function to find the longest common prefix string amongst an array of strings. If there is no common prefix, return an empty string "".
 ```
-SELECT
-    first_name,
-    last_name,
-    salary
-FROM Employees
-WHERE
-    salary > 10000 and salary < 20000
-;
+Example 1:
+Input: strs = ["flower","flow","flight"]
+Output: "fl"
 ```
-### Task5:
--- Найти всех сотрудников (имя и фамилию, айди департамента) не из 60, 30 и 100 департаментов
 ```
-SELECT
-    first_name,
-    last_name,
-    department_id
-FROM Employees
-WHERE
-    department_id not in (30, 60, 100)
-;
+Example 2:
+Input: strs = ["dog","racecar","car"]
+Output: ""
+Explanation: There is no common prefix among the input strings.
 ```
-### Task6:
---  Найти всех сотрудников (имя и фамилию), у которых есть две буквы ll подряд в середине имени
-```
-SELECT
-    first_name,
-    last_name
-FROM Employees
-WHERE
-    first_name like '%_ll_%'
-;
-```
-### Task7:
---  Найти всех сотрудников (имя и фамилию), у которых фамилия кончается на a
-```
-SELECT
-    first_name,
-    last_name
-FROM Employees
-WHERE
-    last_name like '%a'
-;
-```
-
-### Homework:
-Задачи:
-1. Найти всех сотрудников, работающих в департаменте с id 90
-2. Найти всех сотрудников, зарабатывающих больше 5000
-3. Найти всех сотрудников, чья фамилия начинается на букву L
-4. Вывести всех сотрудников с job_id ‘FI_ACCOUNT’ и зарабатывающих меньше 8000
-5. Вывести всех сотрудников кроме тех, кто работает в департаментах 80 и 110
-6. Вывести сотрудников зарабатывающих от 5000 до 7000 (включая концы)
-Материалы:
-1) Базовые понятия и синтаксис: https://drive.google.com/file/d/1E3AlHEiIwoceUUJwoXLf0-rUcelWQhZY/view
-2)Логические операторы:
-https://drive.google.com/file/d/15oYTsuHLTRFLpMAszICBbrASkhWDmszn/view
-https://drive.google.com/file/d/1VMgwOLCECyUPgrY8y0G7LEoJkbzgSBv7/view
-3) Домашка:
-Установить MySQL server и MySQL Workbench по инструкции из видео: https://drive.google.com/file/d/1SXcx3GhQwwPctgVBS9KuYW_czrksua9Z/view
