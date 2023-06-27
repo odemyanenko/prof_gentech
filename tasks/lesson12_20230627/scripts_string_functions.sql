@@ -1,0 +1,27 @@
+-- 20 commonly used string functions in MySQL:
+
+-- CONCAT: Concatenates two or more strings together.
+-- LENGTH: Returns the length of a string.
+-- SUBSTRING: Extracts a substring from a string.
+-- REPLACE: Replaces occurrences of a substring within a string.
+-- UPPER: Converts a string to uppercase.
+-- LOWER: Converts a string to lowercase.
+-- TRIM: Removes leading and trailing spaces from a string.
+-- LEFT: Returns the specified number of leftmost characters from a string.
+-- RIGHT: Returns the specified number of rightmost characters from a string.
+-- INSTR: Returns the position of a substring within a string.
+-- CHAR_LENGTH: Returns the character length of a string (including multibyte characters).
+-- ASCII: Returns the ASCII value of the first character in a string.
+-- LPAD: Pads a string with a specified character on the left side.
+-- RPAD: Pads a string with a specified character on the right side.
+-- LOCATE: Returns the position of a substring within a string.
+-- CONCAT_WS: Concatenates multiple strings with a specified separator.
+-- REGEXP_REPLACE: Replaces occurrences of a regular expression pattern within a string.
+-- REVERSE: Reverses a string.
+-- FORMAT: Formats a number with commas and a specified number of decimal places.
+-- SOUNDEX: Returns a phonetic representation of a string.
+-- INSERT: Inserts a substring into a string at a specified position.
+-- REPEAT: Repeats a string a specified number of times.
+-- FIND_IN_SET: Searches for a value within a comma-separated list of values.
+-- MID: Returns a substring from a string, starting at a specified position.
+-- FIELD: Returns the index position of a value in a list of values.
