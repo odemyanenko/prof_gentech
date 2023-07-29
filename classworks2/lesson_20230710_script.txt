@@ -25,3 +25,8 @@ db.workers.find({$and: [
 {salary: {$gt: 3500}}, 
 {position: {$ne: 'SEO'}}
 ]})
+====
+db.workers.find({
+salary: {$gt: 3500}, 
+position: {$ne: 'SEO'}
+})
