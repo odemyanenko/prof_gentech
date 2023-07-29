@@ -1,0 +1,20 @@
+use tmp
+db.createCollection("users")
+db.users.insertMany([
+{id: 1, name: 'Anatoliy', lastname: 'Ivanenko', age: 31}, 
+{id: 2, name: 'Maksim', lastname: 'Griboko', age: 33}, 
+{id: 3, name: 'Anton', lastname: 'Kulenko', age: 30}
+])
+db.users.find()
+--------
+db.createCollections("workers")
+db.workers.insertMany([
+{id: 1, firstname: 'Petr', lastname: 'Sergeev', position: 'SEO', salary: 7000},
+{id: 2, firstname: 'Viktor', lastname: 'Semenov', position: 'Web-developer', salary: 5000},
+{id: 3, firstname: 'Nikita', lastname: 'Petrov', position: 'Assistant', salary: 3500},
+{id: 4, firstname: 'Inna', lastname: 'Orlova', position: 'Accountant', salary: 4500}
+])
+db.workers.find()
+db.workers.find({firstname: {$eq: 'Viktor'}})
+db.workers.find({firstname: 'Viktor'})
+db.workers.find({salary: {$gte: 5000}})
