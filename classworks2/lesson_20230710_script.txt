@@ -34,3 +34,4 @@ position: {$ne: 'SEO'}
 ------------------------
 db.workers.find({salary: {$in: [7000, 3500]}})
 db.workers.find({salary: {$nin: [7000, 3500]}})
+db.workers.find({position: {$in: ['SEO', 'Web-developer']}})
