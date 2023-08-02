@@ -4,5 +4,6 @@
 - [MongoDB | Операторы выборки] (https://metanit.com/nosql/mongodb/2.8.php)
 ## Inanc Hayk
 - [https://t.me/JabScrip]
+- 
 ## Bakhtinov Andrei
 - [Discord andreibakhtinov]
