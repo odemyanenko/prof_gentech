@@ -1,0 +1,73 @@
+-- https://western-appeal-39b.notion.site/GenTech-Summary-Aug-9-2023-f6dcb60d6602418585649b5e187b643f
+
+db.users.aggregate()
+
+-- **Пример. Вывести юзеров из `USA`**
+db.users.aggregate([
+	{$match: {country: "USA"}}
+])
+
+-- **Задача. Установить юзеру `1` отрицательный баланс (`-100`)**
+db.users.updateOne(
+	{_id: 1},
+	{$set: {balance: -100}}
+)
+
+-- Пример. Вывести юзеров с отрицательным балансом
+db.users.aggregate([
+	{$match: {balance: {$lt: 0}}}
+])
+
+-- Задача. Вывести всех юзеров с положительным балансом не из Germany
+db.users.aggregate([
+	{$match: {
+		balance: {$gt: 0},
+        country: {$ne: "Germany"}
+        }
+	}
+])
+
+-- Задача. Увеличить баланс всем юзерам на 100
+db.users.updateMany(
+	{},
+	{$inc: {balance: 100}}
+)
+
+-- Задача. Увеличить баланс всем юзерам не из Germany на 25%
+db.users.updateMany(
+	{country: {$ne: "Germany"}},
+	{$mul: {balance: 1.25}}	
+)
+
+-- Задача. Вывести незаблокированных юзеров с положительным балансом
+db.users.aggregate([
+	{$match: {
+		balance: {$gte: 0},
+        is_blocked: {$ne: true}
+        }
+	},
+    {$sort: {balance: -1}},
+    {$skip: 1},
+    {$limit: 1}
+])
+
+-- Пример. Вывести имена и балансы юзеров
+db.users.aggregate([
+    {
+        $project: {
+            fullname: 1,
+            balance: 1,
+            _id: 0
+        }
+    }
+])
+
+-- Задача. Вывести содержимое постов юзера (автора) 1
+db.posts.aggregate([
+	{$match: {author_id: 1}},
+    {$project: {
+		content: 1
+    }}
+])
+
+-- mongodb+srv://abab:MOnM0LLj38AEqPIY@telran.2nqjveq.mongodb.net/admin?retryWrites=true&replicaSet=atlas-14l424-shard-0&readPreference=primary&srvServiceName=mongodb&connectTimeoutMS=10000&authSource=admin&authMechanism=SCRAM-SHA-1
