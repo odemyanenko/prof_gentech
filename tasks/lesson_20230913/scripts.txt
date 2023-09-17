@@ -1,0 +1,2 @@
+https://western-appeal-39b.notion.site/Linux-Consultation-Feb-11-2023-9444dd868feb44b98acdab4272632a1d
+https://western-appeal-39b.notion.site/Linux-Git-Consultation-Sep-16-2023-df8ca3f603954744a01d57895072a6c4
